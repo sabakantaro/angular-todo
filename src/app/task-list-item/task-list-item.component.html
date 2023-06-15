@@ -1,0 +1,6 @@
+<label class="{{ task.done ? 'done' : '' }}">
+  <input type="checkbox" [(ngModel)]="task.done">
+  {{ task.title }}
+  deadline{{ task.deadline|date:'yyyy/MM/dd' }}）
+  <span *ngIf="isOverdue(task)" class="overdue">overdue</span>
+</label>
